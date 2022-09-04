@@ -9,28 +9,29 @@ public class EmployeeWage {
 		System.out.println("Welcome to Employee Wage Computation");
 
 		int wagePerHour = 20;
-		int fullDayHours=8;
-		int halfDayHours=4;
-		int salary=0;
-		
+		int fullDayHours = 8;
+		int halfDayHours = 4;
+		int salary = 0;
+
 		Random random = new Random();
 
 		int randomNum = random.nextInt(3);
 
-		if (randomNum == 1)
-		{
+		switch (randomNum) {
+
+		case 0:
+			System.out.println("Employee is absent");
+			break;
+		case 1:
 			System.out.println("Employee is present");
 			salary = wagePerHour * fullDayHours;
-		}
-		
-		else if (randomNum == 2) 
-		
+			break;
+		case 2:
 			salary = wagePerHour * halfDayHours;
-		
-		else
-			System.out.println("Employee is absent");
-		
-		System.out.println("Employee salary :"+salary);
+			break;
+		}
+
+		System.out.println("Employee salary :" + salary);
 	}
 
 }
